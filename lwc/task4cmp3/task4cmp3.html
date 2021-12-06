@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Task4 cmp3" icon-name="standard:logging">
+        <div class="slds-var-m-around_medium">
+            
+            <c-task4cmp1
+                class="slds-show slds-is-relative"
+                onprevious={handlePrevious}
+                onnext={handleNext}
+            ></c-task4cmp1>
+            
+            <c-task2 
+                class="slds-show slds-is-relative"
+                onprevious={handlePrevious}
+                onnext={handleNext}
+            >
+            </c-task2>
+        </div>
+    </lightning-card>
+</template>

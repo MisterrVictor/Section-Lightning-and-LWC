@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Task2 Contact Table" icon-name="standard:contact">
+        <div class="slds-m-around_medium">
+            <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bottom_small" label="Search by Name" value={searchKey}></lightning-input>
+            
+            <template if:true={contacts}>
+                <div style="height: 700px;">
+                    <lightning-datatable
+                        key-field="Id"
+                        data={contacts}
+                        columns={columns}>
+                    </lightning-datatable>
+                </div> 
+            </template>
+            <template if:true={error}>
+                Sorry. There is no data!
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="msg" type="String" />
+    <aura:attribute name="text" type="String" />
+    <aura:attribute name="show" type="boolean" default="true"/>
+    <div><b>{!v.msg}</b></div>
+    <div><b>{!v.text}</b></div>
+    <aura:if isTrue="{!v.show}">
+        <c:c2 />
+        <aura:set attribute="else">
+            Component is not rendered!!!
+        </aura:set>
+    </aura:if>
+    <ui:button aura:id="button" label="re-Render" press="{!c.update}"/>
+</aura:component>
